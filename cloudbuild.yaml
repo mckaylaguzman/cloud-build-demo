@@ -1,11 +1,9 @@
 steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
-  # Remove or comment this out:
-  # - name: 'gcr.io/cloud-builders/npm'
-  #   args: ['run', 'start']
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'cloud-build-demo', '--source=.', '--region=us-west2', '--platform=managed', '--allow-unauthenticated']
+  - name: 'alpine'
+    entrypoint: 'echo'
+    args: ['✅ Cloud Build ran successfully!']
 
 options:
   logging: CLOUD_LOGGING_ONLY
