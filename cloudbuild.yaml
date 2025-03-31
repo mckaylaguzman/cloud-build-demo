@@ -4,6 +4,7 @@ steps:
   - name: 'alpine'
     entrypoint: 'echo'
     args: ['✅ Cloud Build ran successfully!']
+    timeout: 300s
 
 options:
   logging: CLOUD_LOGGING_ONLY
